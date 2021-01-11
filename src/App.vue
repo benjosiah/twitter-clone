@@ -7,9 +7,9 @@
    <div>
      <div class="nav">
        <button @click="id=tab.id" :class="`menue ${id==tab.id? 'blue':''}`" v-for="tab in tabs" v-bind:key="tab"> 
-          <i :class="`${tab.icon}`" ></i>
+         <b> <i :class="`${tab.icon}`" ></i> </b>
           <p>
-            {{tab.title}}
+            <b>{{tab.title}}</b>
           </p>
        </button>
      </div>
@@ -43,6 +43,19 @@
       </button>
      </div>
    </div>
+
+   </div>
+   <!-- tweets -->
+   <div class="tweets">
+
+
+   </div>
+   <!-- explore  -->
+   <div class="explore">
+     <input type="text" placeholder="search twitter">
+     <i class="fas fa-search" ></i>
+
+     
 
    </div>
   </div>
@@ -86,8 +99,8 @@ body{
   padding: 0%;
 }
 .bar{
-  flex-basis:10%;
-  padding: 20px 80px;
+  flex:1;
+  padding: 10px 40px;
   border-right: 1px solid rgb(211, 211, 211);
   height:auto;
 }
@@ -117,7 +130,7 @@ button{
   border-radius: 30px;
   display: flex;
   align-items: center;
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 .menue:hover{
@@ -210,5 +223,43 @@ button:focus{
   width: 100%;
   text-align: left;
   border-radius: 0%;
+}
+
+
+.tweets{
+  flex:3;
+  border-right:1px solid rgb(211, 211, 208);
+  height:100vh;
+}
+
+.explore{
+  flex:2;
+  border-right:1px solid rgb(211, 211, 208);
+  height:100vh;
+  padding: 10px 20px;overflow-y: scroll;
+  position: relative;
+
+}
+
+.explore input{
+   border:1px solid rgb(211, 211, 208);
+   background: rgb(225, 226, 228);
+   width: 70%;
+   border-radius: 30px;
+   padding:10px 30px;
+}
+.explore input:focus{
+  outline: none;
+  
+  border:1px solid rgb(151, 173, 214);
+}
+.fa-search{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-left: 30px;
+  margin-top: 20.5px;
+ color: rgb(161, 162, 165);
+
 }
 </style>
