@@ -17,8 +17,8 @@
        Tweet
      </button>
    </div>
-   <div style="margin:150px 0px; position:relative">
-     <button class="pro">
+   <div style="margin:50px 0px 0px 0px; position:relative">
+     <button class="pro" @click="dropdown=true"> 
        <img src="699698.jpg" alt="">
        <div>
        <p> <b>me me me </b> </p>
@@ -26,8 +26,8 @@
        </div>
        <i class="fas fa-angle-down drop-down"></i>
      </button>
-     <div class="drop">
-      <button class="pro">
+     <div class="drop" v-if="dropdown==true"> 
+      <button class="pro" @click="dropdown=false">
        <img src="699698.jpg" alt="">
        <div>
        <p> <b>me me me </b> </p>
@@ -35,11 +35,11 @@
        </div>
        <i class="fas fa-check blue drop-down"></i>
       </button>
-      <button class="create">
+      <button class="create" @click="dropdown=false" >
         Add existing account
       </button>
-      <button class="logout">
-     logout @josiahben_
+      <button class="logout" @click="dropdown=false">
+        logout @josiahben_
       </button>
      </div>
    </div>
@@ -79,7 +79,15 @@ export default {
         {icon: 'far fa-user', title: 'Profile', id: 'profile'},
         {icon: 'fas fa-ellipsis-h', title: 'More', id: 'more'}
       ],
-      id :'home'
+      id :'home',
+      dropdown:false,
+      trending: [
+        {top: 'Trending in TX', title: 'Gigi', bottom: 'Trending with: Rip Gigi'},
+        {top: 'Music', title: 'We Won', bottom: '135K Tweets'},
+        {top: 'Pop', title: 'Blue Ivy', bottom: '40k tweets'},
+        {top: 'Trending in US', title: 'Denim Day', bottom: '40k tweets'},
+        {top: 'Trending', title: 'When Beyonce', bottom: '25.4k tweets'},
+      ],
     }
   
   }
@@ -210,6 +218,7 @@ button:focus{
   bottom: 50px;
   width: 200px;
   margin-bottom: 26px;
+  background: white;
 
 }
 
@@ -223,6 +232,11 @@ button:focus{
   width: 100%;
   text-align: left;
   border-radius: 0%;
+}
+
+.create p, .logout p{ 
+padding: 30px;
+
 }
 
 
