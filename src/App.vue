@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="container bg-blue">
-      <side/>
+  <div class="flex text-white">
+      <side class="w-1/5"/>
     <!-- tweets -->
     <div class="tweets">
 
