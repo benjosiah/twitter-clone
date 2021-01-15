@@ -2,7 +2,13 @@
   <div class="flex h-screen w-full">
       <side class="w-1/5 h-full border-blue-lighter border-r border-solid"/>
     <!-- tweets -->
-    <div class="w-1/2 h-full">
+    <div class="w-1/2 h-full overflow-y-scroll px-5 py-3">
+      <div class="flex justify-between items-center">
+        <h1 class="fon-bold text-xl text-blue" >
+          Home
+        </h1>
+        <i class="far fa-star text-blue text-xl"></i>
+      </div>
 
 
     </div>
@@ -15,7 +21,7 @@
           <p class="font-bold text-lg ">
             Trends for You
           </p>
-           <i class="fas fa-cog text-lg text-blue"></i>
+           <i class="fas fa-cog text-xl text-blue"></i>
           
         </div>
         <button v-for="trend in trending" v-bind:key="trend" class=" border-0 flex justify-between w-full hover:bg-blue-lighter border-t border-blue-lighter bg-transparent" >
@@ -30,6 +36,24 @@
           Show more
         </button>
       </div>
+      <div class=" w-full rounded-lg bg-blue-lightest mt-4" >
+        <div class="flex items-center justify-between p-3">
+          <p class="font-bold text-lg ">
+            Who to Follow
+          </p>
+        </div>
+        <button v-for="friend in friends" v-bind:key="friend" class=" border-0 flex p-3 w-full hover:bg-blue-lighter border-t border-blue-lighter bg-transparent" >
+          <img src="699698.jpg" class="w-12 h-12 rounded-full">
+          <div class="ml-4 mt-1">
+          <p class="text-sm font-bold leading-tight mt-0 p-0 mb-0" >{{friend.name}}</p>
+          <p class="text-sm leading-tight p-0 mt-0">{{friend.handle}}</p>
+          </div>
+          <button class=" ml-auto text-sm py-1 px-4 rounded-full border-solid border-1 border-blue bg-white">
+            follow
+          </button>
+        </button>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -83,39 +107,5 @@ export default {
   body{
     padding: 0%;
     margin: 0%;
-  }
-  .container{
-    display: flex;
-    margin: 0px;
-    width: 100%;
-    height: auto;
-    padding: 0%;
-  }
-   .explore{
-    flex:2;
-    border-right:1px solid rgb(211, 211, 208);
-    height:100vh;
-    padding: 10px 20px;overflow-y: scroll;
-    position: relative;
-  
-  }
-  
-  .explore input{
-     border:1px solid rgb(211, 211, 208);
-     background: rgb(225, 226, 228);
-     width: 70%;
-     border-radius: 30px;
-     padding:10px 30px;
-  }
-  .explore input:focus{
-    outline: none;
-    
-    border:1px solid rgb(151, 173, 214);
-  }
-  
-  .tweets{
-    flex:3;
-    border-right:1px solid rgb(211, 211, 208);
-    height:100vh;
   }
 </style>
