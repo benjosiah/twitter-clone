@@ -1,22 +1,72 @@
 <template>
   <div class="flex h-screen w-full">
-      <side class="w-1/5 h-full border-blue-lighter border-r border-solid"/>
+      <side class="w-1/5 h-full border-grey-lighter border-r border-solid"/>
     <!-- tweets -->
-    <div class="w-1/2 h-full overflow-y-scroll px-5 py-3">
-      <div class="flex justify-between items-center">
-        <h1 class="fon-bold text-xl text-blue" >
+    <div class="w-1/2 h-screen overflow-y-scroll overflow-x-hidden" >
+      <div class="flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3" >
+        <h1 class="font-bold text-xl" >
           Home
         </h1>
         <i class="far fa-star text-blue text-xl"></i>
       </div>
+      <div class=" border-0 px-5 py-3 border-b-8 border-grey-lighter border-solid flex" >
+        <div>
+           <img src="699698.jpg" class="w-12 h-12 rounded-full">
+        </div>
+        <form class="w-full px-4 relative">
+          <textarea placeholder="What's Happening?" class=" mt-3 pb-3 w-full focus:outline-none border-0"/>
+          <div class="flex justify-between items-center">
+          <div>
+            <i class="text-xl text-blue mr-4 far fa-image"></i>
+            <i class="text-xl text-blue mr-4 fas fa-film"></i>
+            <i class="text-xl text-blue mr-4 far fa-chart-bar"></i>
+            <i class="text-xl text-blue mr-4 far fa-smile"></i>
+          </div>
 
+          <button class="h-10 px-4 font-semibold text-white rounded-full bg-blue hover:bg-blue-dark border-0 focus:outline-none">
+            tweet
+          </button>
+          </div>
+        </form>
+      </div>
+      <div  v-for="follow in following" v-bind:key="follow" class="flex hover:bg-grey-lighter  w-full p-4 border-0 border-b border-solid border-grey-lighter">
+        <div class="flex-none mt-4 mr-4">
+          <img src="699698.jpg" class="w-12 h-12 rounded-full flex-none">
+        </div>
+        <div class="w-full m-0">
+          <div class="flex items-center w-full m-0">
+            <p class="font-semibold">{{follow.name}}</p>
+            <p class="text-sm text-dark ml-2">{{follow.handle}}</p>
+            <p class="text-sm text-dark ml-2">{{follow.time}}</p>
+            <i></i>
+          </div>
+          <p class="m-0">{{follow.tweet}}</p>
+          <div class="flex justify-between items-center">
+            <div class="flex text-sm items-center" > 
+              <i class="mr-3 far fa-comment "></i>
+              <p>{{follow.comments}}</p>
+            </div>
+             <div class="flex text-sm items-center"> 
+              <i class="mr-3 fas fa-retweet"> </i>
+              <p>{{follow.retweets}}</p>
+            </div>
+             <div class="flex text-sm items-center"> 
+              <i class="mr-5 far fa-heart"> </i>
+              <p>{{follow.like}}</p>
+            </div>  <div class="flex text-sm items-center"> 
+              <i class="mr-5 fas fa-share-square"> </i>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
     </div>
     <!-- explore  -->
     <div class="lg:block hidden w-1/3 h-full border-l border-solid border-grey-light py-2 px-6 relative overflow-y-scroll" >
-      <input type="text" placeholder="search twitter" class=" mb-4 rounded-full w-4/5 p-2 pl-10 bg-blue-lightest text-sm focus:outline-none">
+      <input type="text" placeholder="search twitter" class=" mb-4 rounded-full w-4/5 p-2 pl-10 bg-grey-lightest text-sm focus:outline-none border-0" >
       <i class="fas fa-search absolute pin-t pin-l mt-5  ml-12 text-sm text-blue-light" ></i>
-      <div class=" w-full rounded-lg bg-blue-lightest">
+      <div class=" w-full rounded-lg bg-grey-lightest">
         <div class="flex items-center justify-between p-3">
           <p class="font-bold text-lg ">
             Trends for You
@@ -24,25 +74,25 @@
            <i class="fas fa-cog text-xl text-blue"></i>
           
         </div>
-        <button v-for="trend in trending" v-bind:key="trend" class=" border-0 flex justify-between w-full hover:bg-blue-lighter border-t border-blue-lighter bg-transparent" >
+        <button v-for="trend in trending" v-bind:key="trend" class=" border-0 flex justify-between w-full hover:bg-grey-lighter border-t border-grey-lighter bg-transparent" >
           <div>
             <p class="text-sm text-left  leading-tight text-dark"> {{trend.top}}</p>
             <p class="text-sm text-left  leading-tight font-bold"> {{trend.title}}</p>
             <p class="text-sm text-left  leading-tight text-dark"> {{trend.top}}</p>
           </div>
-          <i class="fas fa-angle-down text-lg text-dark mt-3"></i>
+          <i class="fas fa-ellipsis-h text-lg text-dark mt-3 mr-2 font-semibold"></i>
         </button>
-        <button class="border-0 w-full p-3 hover:bg-blue-lighter text-left text-blue border-t bg-transparent border-blue-lighter">
+        <button class="border-0 w-full p-3 hover:bg-blue-lighter text-left text-blue border-t bg-transparent border-grey-lighter">
           Show more
         </button>
       </div>
-      <div class=" w-full rounded-lg bg-blue-lightest mt-4" >
+      <div class=" w-full rounded-lg bg-grey-lightest mt-4" >
         <div class="flex items-center justify-between p-3">
-          <p class="font-bold text-lg ">
+          <p class="font-bold text-lg">
             Who to Follow
           </p>
         </div>
-        <button v-for="friend in friends" v-bind:key="friend" class=" border-0 flex p-3 w-full hover:bg-blue-lighter border-t border-blue-lighter bg-transparent" >
+        <button v-for="friend in friends" v-bind:key="friend" class=" border-0 flex p-3 w-full hover:bg-blue-lighter border-t border-grey-lighter bg-transparent" >
           <img src="699698.jpg" class="w-12 h-12 rounded-full">
           <div class="ml-4 mt-1">
           <p class="text-sm font-bold leading-tight mt-0 p-0 mb-0" >{{friend.name}}</p>
