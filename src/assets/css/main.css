@@ -181,3 +181,13 @@ body{
    color: rgb(161, 162, 165);
   
   }
+  .top{
+    max-height: 75px;
+  }
+
+  .footer{
+    height: 64px;
+  }
+  .tweet{
+    max-height: calc(100vh - 64px);
+  }

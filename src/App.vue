@@ -1,15 +1,15 @@
 <template>
-  <div class="flex h-screen w-full ">
-      <side class="lg:w-1/5 min-h-full border-grey-lighter border-r border-solid px-2 lg:px-8 py-2 overflow-y-scroll"/>
+  <div class="sm:flex block h-screen w-full ">
+      <side class="lg:w-1/5 min-h-full border-grey-lighter border-r border-solid px-2 lg:px-8 py-2 overflow-y-scroll hidden sm:block"/>
     <!-- tweets -->
-    <div class="lg:w-1/2 h-screen overflow-y-scroll overflow-x-hidden" >
-      <div class="flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3" >
+    <div class="lg:w-1/2 h-screen overflow-x-hidden overflow-y-scroll tweet" >
+      <div class="top flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3" >
         <h1 class="font-bold text-xl" >
           Home
         </h1>
         <i class="far fa-star text-blue text-xl"></i>
       </div>
-      <div class=" border-0 px-5 py-3 border-b-8 border-grey-lighter border-solid flex" >
+      <div class=" border-0 px-5 py-3 border-b-8 border-grey-lighter border-solid sm:flex hidden" >
         <div>
            <img src="699698.jpg" class="w-12 h-12 rounded-full">
         </div>
@@ -43,15 +43,15 @@
           <p class="m-0">{{follow.tweet}}</p>
           <div class="flex justify-between items-center">
             <div class="flex text-sm items-center" > 
-              <i class="mr-3 far fa-comment "></i>
+              <i class="mr-2 far fa-comment "></i>
               <p>{{follow.comments}}</p>
             </div>
              <div class="flex text-sm items-center"> 
-              <i class="mr-3 fas fa-retweet"> </i>
+              <i class="mr-2 fas fa-retweet"> </i>
               <p>{{follow.retweets}}</p>
             </div>
              <div class="flex text-sm items-center"> 
-              <i class="mr-5 far fa-heart"> </i>
+              <i class="mr-2 far fa-heart"> </i>
               <p>{{follow.like}}</p>
             </div>  <div class="flex text-sm items-center"> 
               <i class="mr-5 fas fa-share-square"> </i>
@@ -105,6 +105,12 @@
       </div>
       
     </div>
+    <!-- footer  -->
+    <div class="flex justify-between items-center px-3 sm:hidden .footer" >
+      <div v-for="tab in tabs" :key="tab">
+        <i :class="`${tab.icon} text-2xl mr-4 text-left m-2`" ></i> 
+      </div>
+    </div>
   </div>
 </template>
 
@@ -119,16 +125,10 @@ export default {
     return{
        tabs: [
         {icon: 'fas fa-home', title: 'Home', id:'home'},
-        {icon: 'fas fa-hashtag', title: 'Explore', id: 'explore'},
+        {icon: 'fas fa-search', title: 'Explore', id: 'explore'},
         {icon: 'far fa-bell', title: 'Notifications', id: 'notifications'},
         {icon: 'far fa-envelope', title: 'Messages', id: 'messages'},
-        {icon: 'far fa-bookmark', title: 'Bookmarks', id: 'bookmarks'},
-        {icon: 'fas fa-clipboard-list', title: 'Lists', id: 'lists'},
-        {icon: 'far fa-user', title: 'Profile', id: 'profile'},
-        {icon: 'fas fa-ellipsis-h', title: 'More', id: 'more'}
       ],
-      id :'home',
-      dropdown:false,
       trending: [
         {top: 'Trending in TX', title: 'Gigi', bottom: 'Trending with: Rip Gigi'},
         {top: 'Music', title: 'We Won', bottom: '135K Tweets'},
