@@ -1,8 +1,8 @@
 <template>
-  <div class="flex h-screen w-full">
-      <side class="w-1/5 h-full border-grey-lighter border-r border-solid"/>
+  <div class="flex h-screen w-full ">
+      <side class="lg:w-1/5 min-h-full border-grey-lighter border-r border-solid px-2 lg:px-8 py-2 overflow-y-scroll"/>
     <!-- tweets -->
-    <div class="w-1/2 h-screen overflow-y-scroll overflow-x-hidden" >
+    <div class="lg:w-1/2 h-screen overflow-y-scroll overflow-x-hidden" >
       <div class="flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3" >
         <h1 class="font-bold text-xl" >
           Home
