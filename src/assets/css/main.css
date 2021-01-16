@@ -3,7 +3,6 @@
 body{
     padding: 0%;
     margin: 0%;
-    height: 100vh;
   }
   .container{
     display: flex;
@@ -12,12 +11,7 @@ body{
     height: auto;
     padding: 0%;
   }
-  .bar{
-    flex:1;
-    padding: 10px 40px;
-    border-right: 1px solid rgb(211, 211, 211);
-    height:auto;
-  }
+
   button{
     border: none;
      background: none;
@@ -173,15 +167,7 @@ body{
     
     border:1px solid rgb(151, 173, 214);
   }
-  .fa-search{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    margin-left: 30px;
-    margin-top: 20.5px;
-   color: rgb(161, 162, 165);
-  
-  }
+
   .top{
     max-height: 75px;
   }
@@ -190,5 +176,8 @@ body{
     height: 64px;
   }
   .tweet{
-    max-height: calc(100vh - 64px);
+    height: calc(100vh - 129px);
+  }
+  .pin-b-6{
+    bottom: 90px;
   }

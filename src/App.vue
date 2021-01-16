@@ -1,15 +1,18 @@
 <template>
-  <div class="sm:flex block h-screen w-full overflow-y-scroll  overflow-x-hidden">
+  <div class="sm:flex block h-screen w-full">
       <side class="lg:w-1/5 min-h-full border-grey-lighter border-r border-solid px-2 lg:px-8 py-2 overflow-y-scroll hidden sm:block"/>
     <!-- tweets -->
-    <div class="lg:w-1/2 h-screen tweet" >
+    <div class="lg:w-1/2 h-screen">
       <div class="top flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3 bg-white" >
+       <div class="flex ">
+         <img src="699698.jpg" class="w-12 h-12 rounded-full mr-4">
         <h1 class="font-bold text-xl " >
           Home
         </h1>
+       </div>
         <i class="far fa-star text-blue text-xl"></i>
       </div>
-      <div class="overflow-y-scroll overflow-x-hidden">
+      <div class="overflow-y-scroll overflow-x-hidden tweet relative">
       <div class=" border-0 px-5 py-3 border-b-8 border-grey-lighter border-solid sm:flex hidden" >
         <div>
            <img src="699698.jpg" class="w-12 h-12 rounded-full">
@@ -51,17 +54,25 @@
               <i class="mr-2 fas fa-retweet"> </i>
               <p>{{follow.retweets}}</p>
             </div>
-             <div class="flex text-sm items-center"> 
-              <i class="mr-2 far fa-heart"> </i>
+             <div class="flex text-sm items-center rounded-full hover:bg-red-lightest hover:po" > 
+              <i class="mr-2 far fa-heart  "> </i>
               <p>{{follow.like}}</p>
-            </div>  <div class="flex text-sm items-center"> 
+            </div>  
+            <div class="flex text-sm items-center"> 
               <i class="mr-5 fas fa-share-square"> </i>
             </div>
           </div>
         </div>
         </div>
       </div>
-
+       <button class="h-16 w-16 text-white rounded-full absolute font-semibold bg-blue mr-4 pin-r pin-b-6">
+        <i class="fas fa-plus" ></i> 
+       </button>
+      <div class="flex justify-between items-center px-3 sm:hidden .footer" >
+        <div @click="id=tab.id"  v-for="tab in tabs" :key="tab" :class="`font-normal ${id==tab.id? 'text-blue':''}`">
+          <i :class="`${tab.icon} text-2xl mr-4 text-left m-2`" ></i> 
+        </div>
+      </div>
     </div>
     <!-- explore  -->
     <div class="lg:block hidden w-1/3 h-full border-l border-solid border-grey-light py-2 px-6 relative overflow-y-scroll" >
@@ -107,11 +118,6 @@
       
     </div>
     <!-- footer  -->
-    <div class="flex justify-between items-center px-3 sm:hidden .footer" >
-      <div v-for="tab in tabs" :key="tab">
-        <i :class="`${tab.icon} text-2xl mr-4 text-left m-2`" ></i> 
-      </div>
-    </div>
   </div>
 </template>
 
@@ -130,6 +136,7 @@ export default {
         {icon: 'far fa-bell', title: 'Notifications', id: 'notifications'},
         {icon: 'far fa-envelope', title: 'Messages', id: 'messages'},
       ],
+      id :'home',
       trending: [
         {top: 'Trending in TX', title: 'Gigi', bottom: 'Trending with: Rip Gigi'},
         {top: 'Music', title: 'We Won', bottom: '135K Tweets'},
