@@ -1,14 +1,15 @@
 <template>
-  <div class="sm:flex block h-screen w-full ">
+  <div class="sm:flex block h-screen w-full overflow-y-scroll  overflow-x-hidden">
       <side class="lg:w-1/5 min-h-full border-grey-lighter border-r border-solid px-2 lg:px-8 py-2 overflow-y-scroll hidden sm:block"/>
     <!-- tweets -->
-    <div class="lg:w-1/2 h-screen overflow-x-hidden overflow-y-scroll tweet" >
-      <div class="top flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3" >
-        <h1 class="font-bold text-xl" >
+    <div class="lg:w-1/2 h-screen tweet" >
+      <div class="top flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3 bg-white" >
+        <h1 class="font-bold text-xl " >
           Home
         </h1>
         <i class="far fa-star text-blue text-xl"></i>
       </div>
+      <div class="overflow-y-scroll overflow-x-hidden">
       <div class=" border-0 px-5 py-3 border-b-8 border-grey-lighter border-solid sm:flex hidden" >
         <div>
            <img src="699698.jpg" class="w-12 h-12 rounded-full">
@@ -34,7 +35,7 @@
           <img src="699698.jpg" class="w-12 h-12 rounded-full flex-none">
         </div>
         <div class="w-full m-0">
-          <div class="flex items-center w-full m-0">
+          <div class="flex items-center m-0">
             <p class="font-semibold">{{follow.name}}</p>
             <p class="text-sm text-dark ml-2">{{follow.handle}}</p>
             <p class="text-sm text-dark ml-2">{{follow.time}}</p>
@@ -56,8 +57,8 @@
             </div>  <div class="flex text-sm items-center"> 
               <i class="mr-5 fas fa-share-square"> </i>
             </div>
-
           </div>
+        </div>
         </div>
       </div>
 
@@ -142,10 +143,10 @@ export default {
         {src: 'kevin.jpg', name: 'Kevin Hart', handle: '@miniRock'}
       ],
       following: [
-        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '20 min', tweet: 'Should I just quarantine on mars??', comments: '1,000', retweets: '550', like: '1,000,003'},
-        {src: 'kevin.jpg', name: 'Kevin Hart', handle: '@miniRock', time: '55 min', tweet: 'Should me and the rock do another sub-par movie together????', comments: '2,030', retweets: '50', like: '20,003'},
-        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Haha just made a flame thrower. Shld I sell them?', comments: '100,000', retweets: '1,000,002', like: '5,000,003'},
-        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Just did something crazyyyyyyy', comments: '100,500', retweets: '1,000,032', like: '5,000,103'}
+        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '20 min', tweet: 'Should I just quarantine on mars??', comments: '1.6k', retweets: '550', like: '67k'},
+        {src: 'kevin.jpg', name: 'Kevin Hart', handle: '@miniRock', time: '55 min', tweet: 'Should me and the rock do another sub-par movie together????', comments: '2,030', retweets: '50', like: '20k'},
+        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Haha just made a flame thrower. Shld I sell them?', comments: '106', retweets: '1k', like: '5.5k'},
+        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Just did something crazyyyyyyy', comments: '100k', retweets: '178', like: '600'}
       ],
     }
   
