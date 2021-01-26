@@ -5,7 +5,7 @@
     <div class="lg:w-1/2 h-screen">
       <div class="top flex justify-between items-center border-0 border-solid border-b border-grey-lighter px-5 py-3 bg-white" >
        <div class="flex ">
-         <img src="699698.jpg" class="w-12 h-12 rounded-full mr-4">
+         <img src="699698.jpg" class="sm:hidden block w-12 h-12 rounded-full mr-4">
         <h1 class="font-bold text-xl " >
           Home
         </h1>
@@ -35,14 +35,17 @@
       </div>
       <div  v-for="follow in following" v-bind:key="follow" class="flex hover:bg-grey-lighter  w-full p-4 border-0 border-b border-solid border-grey-lighter">
         <div class="flex-none mt-4 mr-4">
-          <img src="699698.jpg" class="w-12 h-12 rounded-full flex-none">
+          <img :src="`${ follow.src }`" class=" w-12 h-12 rounded-full flex-none">
         </div>
         <div class="w-full m-0">
-          <div class="flex items-center m-0">
-            <p class="font-semibold">{{follow.name}}</p>
-            <p class="text-sm text-dark ml-2">{{follow.handle}}</p>
-            <p class="text-sm text-dark ml-2">{{follow.time}}</p>
-            <i></i>
+          <div class="flex w-full justify-between">
+            <div class="flex items-center m-0">
+              <p class="font-semibold">{{follow.name}}</p>
+              <p class="text-sm text-dark ml-2">{{follow.handle}}</p>
+              <p class="text-sm text-dark ml-2">{{follow.time}}</p>
+            </div>
+            
+            <i class="fas fa-ellipsis-h text-lg text-dark text-left  font-semibold"></i>
           </div>
           <p class="m-0">{{follow.tweet}}</p>
           <div class="flex justify-between items-center">
@@ -65,7 +68,7 @@
         </div>
         </div>
       </div>
-       <button class="h-16 w-16 text-white rounded-full absolute font-semibold bg-blue mr-4 pin-r pin-b-6">
+       <button class="h-16 w-16 text-white rounded-full absolute font-semibold bg-blue mr-4 pin-r pin-b-6 sm:hidden block">
         <i class="fas fa-plus" ></i> 
        </button>
       <div class="flex justify-between items-center px-3 sm:hidden .footer" >
@@ -147,12 +150,12 @@ export default {
         friends: [
         {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy'},
         {src: 'monk.jpg', name: 'Adrian Monk', handle: '@detective:)'},
-        {src: 'kevin.jpg', name: 'Kevin Hart', handle: '@miniRock'}
+        {src: 'qnFYDGO9_400x400.jpg', name: 'Kevin Hart', handle: '@miniRock'}
       ],
       following: [
-        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '20 min', tweet: 'Should I just quarantine on mars??', comments: '1.6k', retweets: '550', like: '67k'},
-        {src: 'kevin.jpg', name: 'Kevin Hart', handle: '@miniRock', time: '55 min', tweet: 'Should me and the rock do another sub-par movie together????', comments: '2,030', retweets: '50', like: '20k'},
-        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Haha just made a flame thrower. Shld I sell them?', comments: '106', retweets: '1k', like: '5.5k'},
+        {src: '6_Cnf8ED_400x400.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '20 min', tweet: 'Should I just quarantine on mars??', comments: '1.6k', retweets: '550', like: '67k'},
+        {src: '6gy2bvnB_400x400.jpg', name: 'Kevin Hart', handle: '@miniRock', time: '55 min', tweet: 'Should me and the rock do another sub-par movie together????', comments: '2,030', retweets: '50', like: '20k'},
+        {src: 'qnFYDGO9_400x400.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Haha just made a flame thrower. Shld I sell them?', comments: '106', retweets: '1k', like: '5.5k'},
         {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Just did something crazyyyyyyy', comments: '100k', retweets: '178', like: '600'}
       ],
     }
