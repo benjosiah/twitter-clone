@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:flex block h-screen w-full">
+  <div class="sm:flex block h-screen w-full overflow-hidden">
       <side class="lg:w-1/5 min-h-full border-grey-lighter border-r border-solid px-2 lg:px-8 py-2 overflow-y-scroll hidden sm:block"/>
     <!-- tweets -->
     <div class="lg:w-1/2 h-screen">
@@ -153,10 +153,10 @@ export default {
         {src: 'qnFYDGO9_400x400.jpg', name: 'Kevin Hart', handle: '@miniRock'}
       ],
       following: [
-        {src: '6_Cnf8ED_400x400.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '20 min', tweet: 'Should I just quarantine on mars??', comments: '1.6k', retweets: '550', like: '67k'},
-        {src: '6gy2bvnB_400x400.jpg', name: 'Kevin Hart', handle: '@miniRock', time: '55 min', tweet: 'Should me and the rock do another sub-par movie together????', comments: '2,030', retweets: '50', like: '20k'},
-        {src: 'qnFYDGO9_400x400.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Haha just made a flame thrower. Shld I sell them?', comments: '106', retweets: '1k', like: '5.5k'},
-        {src: 'elon.jpg', name: 'Elon Musk', handle: '@teslaBoy', time: '1.4 hr', tweet: 'Just did something crazyyyyyyy', comments: '100k', retweets: '178', like: '600'}
+        {src: '6_Cnf8ED_400x400.jpg', name: "sophia's Expression", handle: '@sophia', time: '20 min', tweet: 'teach us to number our days ', comments: '1.6k', retweets: '550', like: '67k'},
+        {src: '6gy2bvnB_400x400.jpg', name: 'mike Musk', handle: '@i_miky', time: '55 min', tweet: 'react is the present and future', comments: '2,030', retweets: '50', like: '20k'},
+        {src: 'qnFYDGO9_400x400.jpg', name: 'The great tay', handle: '@taycode', time: '1.4 hr', tweet: 'God!!! i am broken ', comments: '106', retweets: '1k', like: '5.5k'},
+        {src: '6_Cnf8ED_400x400.jpg', name: "sophia's Expression", handle: '@sophia', time: '1.4 hr', tweet: 'of your fulness have we all recieved', comments: '100k', retweets: '178', like: '600'}
       ],
     }
   
