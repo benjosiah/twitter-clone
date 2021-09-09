@@ -157,7 +157,7 @@ export default {
         {src: '6_Cnf8ED_400x400.jpg', name: "sophia's Expression", handle: '@sophia', time: '20 min', tweet: 'teach us to number our days ', comments: '1.6k', retweets: '550', like: '67k'},
         {src: '6gy2bvnB_400x400.jpg', name: 'mike Musk', handle: '@i_miky', time: '55 min', tweet: 'react is the present and future', comments: '2,030', retweets: '50', like: '20k'},
         {src: 'qnFYDGO9_400x400.jpg', name: 'The great tay', handle: '@taycode', time: '1.4 hr', tweet: 'God!!! i am broken ', comments: '106', retweets: '1k', like: '5.5k'},
-        {src: '6_Cnf8ED_400x400.jpg', name: "sophia's Expression", handle: '@sophia', time: '1.4 hr', tweet: 'of your fulness have we all recieved', comments: '100k', retweets: '178', like: '600'}
+        {src: '6_Cnf8ED_400x400.jpg', name: "sophia's Expression", handle: '@sophia', time: '1.4 hr', tweet: 'of your fulness have we all recieved', comments: '100k', retweets: '178', like: '600'},
         {src: '699698.jpg', name: 'I am popstar', handle: '@popstar', time: '1.4 hr', tweet: 'the man in me is awake', comments: '106', retweets: '1k', like: '5.5k'},
       ],
     }
