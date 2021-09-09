@@ -153,7 +153,7 @@ export default {
         {src: 'qnFYDGO9_400x400.jpg', name: 'Kevin Hart', handle: '@miniRock'}
       ],
       following: [
-        {src: '699698.jpg', name: 'I am popstar', handle: '@popstar', time: '1.4 hr', tweet: 'hold on to me cos i'm alitle unsteady ', comments: '106', retweets: '1k', like: '5.5k'},
+        {src: '699698.jpg', name: 'I am popstar', handle: '@popstar', time: '1.4 hr', tweet: "hold on to me cos i'm alitle unsteady ", comments: '106', retweets: '1k', like: '5.5k'},
         {src: '6_Cnf8ED_400x400.jpg', name: "sophia's Expression", handle: '@sophia', time: '20 min', tweet: 'teach us to number our days ', comments: '1.6k', retweets: '550', like: '67k'},
         {src: '6gy2bvnB_400x400.jpg', name: 'mike Musk', handle: '@i_miky', time: '55 min', tweet: 'react is the present and future', comments: '2,030', retweets: '50', like: '20k'},
         {src: 'qnFYDGO9_400x400.jpg', name: 'The great tay', handle: '@taycode', time: '1.4 hr', tweet: 'God!!! i am broken ', comments: '106', retweets: '1k', like: '5.5k'},
